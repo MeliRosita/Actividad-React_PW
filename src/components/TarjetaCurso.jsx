@@ -1,25 +1,21 @@
 import PropTypes from "prop-types";
 
-function TarjetaCurso({ tema, descripcion, importancia, disponible }) {
+function TarjetaTema({ tema, descripcion, importancia, disponible }) {
   return (
     <div className="tarjeta">
-      <h3>{tema}</h3>
-
+      <h4>{tema}</h4>
       <p><strong>Descripción:</strong> {descripcion}</p>
       <p><strong>Importancia:</strong> {importancia}</p>
-
-      <p>
-        <strong>Estado:</strong> {disponible ? "Tema incluido" : "Tema pendiente"}
-      </p>
+      <p><strong>Estado:</strong> {disponible ? "Incluido" : "Pendiente"}</p>
     </div>
   );
 }
 
-TarjetaCurso.propTypes = {
+TarjetaTema.propTypes = {
   tema: PropTypes.string,
   descripcion: PropTypes.string,
   importancia: PropTypes.string,
   disponible: PropTypes.bool
 };
 
-export default TarjetaCurso;
+export default TarjetaTema;
